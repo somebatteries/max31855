@@ -38,7 +38,7 @@ int main(int argc, char** argv) {
         .bits_per_word = 8,
     };
 
-	const char * dev = argc ? argv[1] : SPI_DEVICE;
+    const char * dev = argc > 1 ? argv[1] : SPI_DEVICE;
 
     spi_fd = open(dev, O_RDWR);
     if (spi_fd < 0) {
